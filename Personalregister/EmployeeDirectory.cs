@@ -15,4 +15,9 @@ public class EmployeeDirectory
     {
         Employees = employees;
     }
+
+    public void AddEmployee(Employee employee)
+    {
+        Employees.Add(employee);
+    }
 }
