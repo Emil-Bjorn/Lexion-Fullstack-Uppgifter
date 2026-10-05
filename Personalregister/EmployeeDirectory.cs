@@ -4,9 +4,9 @@ namespace Personalregister;
 
 public class EmployeeDirectory
 {
-    public Employee[] Employees {get; set;}
+    public List<Employee> Employees {get; set;}
     
-    public EmployeeDirectory(Employee[] employees)
+    public EmployeeDirectory(List<Employee> employees)
     {
         Employees = employees;
     }
