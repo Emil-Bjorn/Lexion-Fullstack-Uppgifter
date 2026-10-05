@@ -11,4 +11,9 @@ public class Employee
         Name = name;
         Salary = salary;
     }
+
+    public override string ToString()
+    {
+        return $"{Name} {Salary}";
+    }
 }
