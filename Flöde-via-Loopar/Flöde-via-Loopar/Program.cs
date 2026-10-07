@@ -5,6 +5,7 @@ bool running = true;
 
 while (running)
 {
+    // Text printed to console explaining to user how to use the program
     Console.WriteLine("You have reached the main menu. Navigate the menu by inputting a number.");
     Console.WriteLine("0. Quit program");
     Console.WriteLine("1. Check price (one person)");
@@ -20,6 +21,7 @@ while (running)
             running = false;
             break;
         }
+        // If user inputs a valid int, run CheckAge on user input and write the return value to console
         case "1":
         {
             Console.Write("Please input an age: ");
@@ -33,6 +35,8 @@ while (running)
             }
             break;
         }
+        // User first inputs the size of group, then CheckAge is run for each member of the group
+        // If user does not input a valid input, user is sent back to main menu. 
         case "2":
         {
             Console.Write("Please input the size of the group: ");
@@ -66,6 +70,7 @@ while (running)
             }
             break;
         }
+        // User inputs a text which is printed 10 times on the same line.
         case "3":
         {
             Console.Write("Please input text to be repeated: ");
@@ -79,6 +84,7 @@ while (running)
             }
             break;
         }
+        // User inputs a string seperated by spaces (" ") and the console outputs the third word in the string
         case "4":
         {
             Console.Write("Please input 3 words or more: ");
@@ -90,6 +96,7 @@ while (running)
             }
             break;
         }
+        // If the user inputs a command that is not listed, print an error message. 
         default:
             Console.WriteLine("Unknown command. Please input one of the numbers listed.");
             break;
