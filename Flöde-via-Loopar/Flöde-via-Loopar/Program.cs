@@ -6,8 +6,8 @@ while (running)
 {
     Console.WriteLine("You have reached the main menu. Navigate the menu by inputting a number.");
     Console.WriteLine("0. Quit program");
-    Console.WriteLine("1. Check age group (one person)");
-    Console.WriteLine("2. Check age group (group)");
+    Console.WriteLine("1. Check price (one person)");
+    Console.WriteLine("2. Check price (group)");
     Console.Write("Input a command: ");
     
     switch (Console.ReadLine())
