@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 bool running = true;
 
@@ -83,6 +84,11 @@ while (running)
         {
             Console.Write("Please input 3 words or more: ");
             var input = Console.ReadLine();
+            if (input != null && input.Split(" ").Length >= 3)
+            {
+                var third = input.Split(" ")[2];
+                Console.WriteLine($"The third word is: {third}");
+            }
             break;
         }
         default:
