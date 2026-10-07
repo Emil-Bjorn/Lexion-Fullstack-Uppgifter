@@ -1,3 +1,6 @@
 <Solution>
+  <Folder Name="/Flöde-via-Loopar/">
+    <Project Path="Flöde-via-Loopar/Flöde-via-Loopar/Flöde-via-Loopar.csproj" />
+  </Folder>
   <Project Path="Personalregister/Personalregister.csproj" />
 </Solution>
