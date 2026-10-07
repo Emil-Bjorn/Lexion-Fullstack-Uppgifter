@@ -9,6 +9,7 @@ while (running)
     Console.WriteLine("0. Quit program");
     Console.WriteLine("1. Check price (one person)");
     Console.WriteLine("2. Check price (group)");
+    Console.WriteLine("3. Repeat 10 times");
     Console.Write("Input a command: ");
     
     switch (Console.ReadLine())
@@ -56,6 +57,17 @@ while (running)
             else
             {
                 Console.WriteLine("Invalid group size. Please input a number");
+            }
+            break;
+        case "3":
+            Console.Write("Please input text to be repeated: ");
+            string? input = Console.ReadLine();
+            if (input != null)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.Write($"{i + 1}. {input}, ");
+                }
             }
             break;
         default:
