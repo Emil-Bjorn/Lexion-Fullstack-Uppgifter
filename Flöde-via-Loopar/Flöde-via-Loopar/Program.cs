@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 bool running = true;
 
@@ -27,13 +28,34 @@ while (running)
             }
             break;
         case "2":
-            Console.Write("Please input the size of the group");
+            Console.Write("Please input the size of the group: ");
             if (int.TryParse(Console.ReadLine(), out int groupSize)) {
-                
+                List<string> responses = new List<string>();
+                for (int i = 0; i < groupSize; i ++)
+                {
+                    Console.Write("Please input an age: ");
+                    if (int.TryParse(Console.ReadLine(), out age))
+                    {
+                        responses.Add(CheckAge(age));
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid age. Please only use numbers");
+                        break;
+                    }
+                }
+                if (responses.Count == groupSize)
+                {
+                    Console.WriteLine($"Size of group: {groupSize}");
+                    foreach (string response in responses)
+                    {
+                        Console.WriteLine(response);
+                    }  
+                }
             }
             else
             {
-                
+                Console.WriteLine("Invalid group size. Please input a number");
             }
             break;
         default:
