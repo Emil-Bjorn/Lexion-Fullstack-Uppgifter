@@ -17,7 +17,14 @@ while (running)
             break;
         case "1":
             Console.Write("Please input an age: ");
-            Console.WriteLine(CheckAge(Console.ReadLine()));
+            if (int.TryParse(Console.ReadLine(), out int age))
+            {
+                Console.WriteLine(CheckAge(age));
+            }
+            else
+            {
+                Console.WriteLine("Invalid age. Please input a number.");
+            }
             break;
         case "2":
             Console.Write("Please input the size of the group");
