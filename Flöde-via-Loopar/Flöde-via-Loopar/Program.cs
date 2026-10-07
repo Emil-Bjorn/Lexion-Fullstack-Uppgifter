@@ -35,21 +35,13 @@ while (running)
     }
 }
 
-// Takes a nullable string age and returns a string depending on what age group it is
-static string CheckAge(string? ageString)
+// Takes an int age and returns a string depending on what age group it is
+static string CheckAge(int age)
 {
-    if (int.TryParse(ageString, out int age))
+    return age switch
     {
-        return age switch
-        {
-            < 20 => "Ungdomspris: 80kr",
-            > 64 => "Pensionärspris: 90kr",
-            _ => "Standardpris: 120kr",
-        };
-    }
-    // If ageString is not parseable return the following error message instead
-    else
-    {
-        return "Please provide age as a valid number.";
-    }
+        < 20 => "Ungdomspris: 80kr",
+        > 64 => "Pensionärspris: 90kr",
+        _ => "Standardpris: 120kr",
+    };
 }
