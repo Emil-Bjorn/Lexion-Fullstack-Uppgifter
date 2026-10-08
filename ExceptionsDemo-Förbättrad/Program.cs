@@ -11,7 +11,7 @@
                 try
                 {
                     Console.WriteLine("Försöker läsa fil och räkna...");
-                    var path = Path.Combine(AppContext.BaseDirectory, "numberss.txt");
+                    var path = Path.Combine(AppContext.BaseDirectory, "numbers.txt");
                     var result = ProcessFile(path);
                   
                     Console.WriteLine($"\nResultat: {result}");
@@ -66,6 +66,8 @@
                     // Försöker omvandla text till tal
                     int number = int.Parse(line); // Kan ge FormatException
 
+                    if (number == 0.0)
+                        throw new DivideByZeroException(fileName);
                     // Division: kan ge DivideByZeroException
                     return 100.0 / number;
                 }
@@ -79,6 +81,10 @@
                            // bestämma hur man ska återhämta sig. 
                 }
                 catch (FileNotFoundException)
+                {
+                    throw;
+                }
+                catch (DivideByZeroException)
                 {
                     throw;
                 }
