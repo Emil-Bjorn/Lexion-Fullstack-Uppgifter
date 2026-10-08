@@ -78,6 +78,10 @@
                            // men låta anroparen (t.ex. en högre nivå i applikationen)
                            // bestämma hur man ska återhämta sig. 
                 }
+                catch (FileNotFoundException)
+                {
+                    throw new FileNotFoundException();
+                }
                 catch (Exception ex)
                 {
                     // Om vi vill ge en mer meningsfull feltyp till anroparen
