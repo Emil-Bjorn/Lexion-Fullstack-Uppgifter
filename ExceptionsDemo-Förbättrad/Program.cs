@@ -11,7 +11,7 @@
                 try
                 {
                     Console.WriteLine("Försöker läsa fil och räkna...");
-                    var path = Path.Combine(/*AppContext.BaseDirectory, "numbers.txt"*/"");
+                    var path = Path.Combine(AppContext.BaseDirectory, "numbers.txt");
                     var result = ProcessFile(path);
                   
                     Console.WriteLine($"\nResultat: {result}");
@@ -35,9 +35,13 @@
                 {
                     Console.WriteLine($"Argumentfel: {ex.Message}");
                 }
-                catch (InvalidOperationException)
+                catch (InvalidOperationException ex)
                 {
-                    Console.WriteLine("Filen får inte vara tom. ");
+                    Console.Write($"Ogiltig operation: {ex.Message}");
+                    if (ex.InnerException != null)
+                    {
+                        Console.WriteLine($" - {ex.InnerException.Message}");
+                    }
                 }
                 catch (Exception ex)
                 {
