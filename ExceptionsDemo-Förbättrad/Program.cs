@@ -93,6 +93,8 @@
                            // men låta anroparen (t.ex. en högre nivå i applikationen)
                            // bestämma hur man ska återhämta sig. 
                 }
+                // Catch block som fångar exceptions och skickar dem upp till main metoden
+                // På detta sätt undvikar man att de hamnar i catch (Exception ex)
                 catch (FileNotFoundException)
                 {
                     throw;
