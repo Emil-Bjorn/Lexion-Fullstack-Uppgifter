@@ -35,6 +35,10 @@
                 {
                     Console.WriteLine("Filnamn får inte vara tomt.");
                 }
+                catch (InvalidOperationException)
+                {
+                    Console.WriteLine("Filen får inte vara tom. ");
+                }
                 catch (Exception ex)
                 {
                     // Fallback för alla övriga obekanta fel
