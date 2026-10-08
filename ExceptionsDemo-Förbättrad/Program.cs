@@ -11,7 +11,7 @@
                 try
                 {
                     Console.WriteLine("Försöker läsa fil och räkna...");
-                    var path = Path.Combine(AppContext.BaseDirectory, "numbers.txt");
+                    var path = Path.Combine("");
                     var result = ProcessFile(path);
                   
                     Console.WriteLine($"\nResultat: {result}");
@@ -30,6 +30,10 @@
                 {
                     // Specifikt fel om nolldivision
                     Console.WriteLine($"Kan inte dividera med noll: {ex.Message}");
+                }
+                catch (ArgumentException)
+                {
+                    Console.WriteLine("Filnamn får inte vara tomt.");
                 }
                 catch (Exception ex)
                 {
@@ -86,6 +90,10 @@
                     throw;
                 }
                 catch (DivideByZeroException)
+                {
+                    throw;
+                }
+                catch (ArgumentException)
                 {
                     throw;
                 }
