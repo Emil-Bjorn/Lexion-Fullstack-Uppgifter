@@ -11,7 +11,7 @@
                 try
                 {
                     Console.WriteLine("Försöker läsa fil och räkna...");
-                    var path = Path.Combine("");
+                    var path = Path.Combine(AppContext.BaseDirectory, "numbers.txt");
                     var result = ProcessFile(path);
                   
                     Console.WriteLine($"\nResultat: {result}");
@@ -64,14 +64,14 @@
                     reader = new StreamReader(fileName);
 
                     string? line = reader.ReadLine();
-                    if (line == null)
+                    if (string.IsNullOrWhiteSpace(line))
                         throw new InvalidOperationException("Filen är tom.");
 
                     // Försöker omvandla text till tal
                     int number = int.Parse(line); // Kan ge FormatException
 
                     // Om filen innehåller enbart 0 så kastar metoden felet, med filen som det är fel på. 
-                    if (number == 0.0)
+                    if (number == 0)
                         throw new DivideByZeroException(fileName);
                     // Division: kan ge DivideByZeroException
                     return 100.0 / number;
