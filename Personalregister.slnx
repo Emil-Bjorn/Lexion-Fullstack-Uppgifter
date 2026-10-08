@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/ExceptionsDemo-Förbättrad/">
+    <Project Path="ExceptionsDemo-Förbättrad/ExceptionsDemo.csproj" />
+  </Folder>
   <Folder Name="/Flöde-via-Loopar/">
     <Project Path="Flöde-via-Loopar/Flöde-via-Loopar/Flöde-via-Loopar.csproj" />
   </Folder>
