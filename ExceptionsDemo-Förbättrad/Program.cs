@@ -66,6 +66,7 @@
                     // Försöker omvandla text till tal
                     int number = int.Parse(line); // Kan ge FormatException
 
+                    // Om filen innehåller enbart 0 så kastar metoden felet, med filen som det är fel på. 
                     if (number == 0.0)
                         throw new DivideByZeroException(fileName);
                     // Division: kan ge DivideByZeroException
