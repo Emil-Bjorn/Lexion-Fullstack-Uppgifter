@@ -38,6 +38,7 @@
                 catch (InvalidOperationException ex)
                 {
                     Console.Write($"Ogiltig operation: {ex.Message}");
+                    // Om filnamnet är tomt så kommer nedan vara true
                     if (ex.InnerException != null)
                     {
                         Console.WriteLine($" - {ex.InnerException.Message}");
