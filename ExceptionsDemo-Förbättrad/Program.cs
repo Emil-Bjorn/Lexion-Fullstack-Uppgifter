@@ -11,7 +11,7 @@
                 try
                 {
                     Console.WriteLine("Försöker läsa fil och räkna...");
-                    var path = Path.Combine(AppContext.BaseDirectory, "numbers.txt");
+                    var path = Path.Combine(AppContext.BaseDirectory, "numberss.txt");
                     var result = ProcessFile(path);
                   
                     Console.WriteLine($"\nResultat: {result}");
@@ -80,7 +80,7 @@
                 }
                 catch (FileNotFoundException)
                 {
-                    throw new FileNotFoundException();
+                    throw;
                 }
                 catch (Exception ex)
                 {
