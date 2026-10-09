@@ -96,18 +96,9 @@
                 }
                 // Catch block som fångar exceptions och skickar dem upp till main metoden
                 // På detta sätt undvikar man att de hamnar i catch (Exception ex)
-                catch (FileNotFoundException)
-                {
-                    throw;
-                }
-                catch (DivideByZeroException)
-                {
-                    throw;
-                }
-                catch (ArgumentException)
-                {
-                    throw;
-                }
+                catch (FileNotFoundException) {throw;}
+                catch (DivideByZeroException) {throw;}
+                catch (ArgumentException) {throw;}
                 catch (Exception ex)
                 {
                     // Om vi vill ge en mer meningsfull feltyp till anroparen
